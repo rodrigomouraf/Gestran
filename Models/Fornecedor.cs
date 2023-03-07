@@ -24,7 +24,6 @@ namespace Gestran.Models
         [StringLength(100, ErrorMessage = "O e-mail não pode ter mais que 100 caracteres.")]
         public string Email { get; set; }
         
-        [Required(ErrorMessage = "O endereço é obrigatório.")]
-        public List<Endereco> Enderecos { get; set; }
+        public ICollection<Endereco>? Enderecos { get; set; }
     }    
 }
