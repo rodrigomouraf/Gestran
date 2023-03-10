@@ -16,8 +16,8 @@ builder.Services.AddResponseCompression(options  =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-//builder.Services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));
+builder.Services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
+//builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));
 builder.Services.AddScoped<DataContext, DataContext>();
 builder.Services.AddScoped<IEnderecosRepository, EnderecosRepository>();
 
